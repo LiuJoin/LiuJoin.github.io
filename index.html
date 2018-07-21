@@ -152,6 +152,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Python元组，字典和集合相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/20/Python元组，字典和集合相关操作/">Python元组，字典和集合相关操作</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/20/Python元组，字典和集合相关操作/" class="archive-article-date">
+  	<time datetime="2018-07-20T12:46:36.777Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="python元组操作"><a href="#python元组操作" class="headerlink" title="python元组操作"></a>python元组操作</h3><p>和列表相似，运算符和len（），max（），min（）等运算都适用于元组，而那些能改变元素的操作都不能直接操作元组<br>创建单个元素的元组<br>    tuple1=(‘小花花’)，<br>    tuple1=’小花花’，<br>基本格式<br>    格式：变量=(i  for  i   in  元组)<br>    结果：不是元组而是一个生成器<br>带有条件的推导式<br>    格式：变量=(i  for  i   in  元组  if  条件表达式)<br>多个循环的推导式（可带有条件）<br>    格式：变量=(x+y  for  x   in  元组1  for  y   in  元组2  [if 条件表达式])<br>    x+y可以是其他操作    </p>
+<h3 id="字典操作"><a href="#字典操作" class="headerlink" title="字典操作"></a>字典操作</h3><p>字典是一种集合，不是序列。可以看成是由键值对构成的组合。<br>在搜索字典时，首先查找键，当查找到键后就可以直接获取该键对应的值，效率很高<br>创建字典：<br>创建空字典<br>    变量={}<br>    变量=dict()<br>创建单个元素的字典<br>    变量={‘键’,’值’}<br>创建多个元素的字典<br>    变量={键:值,键:值…..}<br>    变量=dict({键:值,键:值…..})<br>    变量=dict({键=值,键值…..})<br>    变量=dict([(键,值),(键,值)……])<br>for in 遍历<br>for i in dict1：<br>print(i)   键<br>print(dict1[i]) 值<br>dect1={‘zs’:’张三’,’ls’:’李四’,’ww’:’王五’,’sl’:’孙六’}<br>result={key:value  for key,value  in  dect1.items()}<br>print(result)<br>字典内置函数<br>dic={‘name’:’张三’,5:’男’,’heigh’:’180’}<br>print(dic)<br>print(str(dic))<br>print(len(dic))<br>print(type(dic))</p>
+<h3 id="集合操作"><a href="#集合操作" class="headerlink" title="集合操作"></a>集合操作</h3><p>集合是无序组合，集合是可变的，可以添加或移除数据，但是没有索引位置的概念（没有下标）。集合中任何元素都没有重复，还可以通过集合去除重复。<br>set和dict类似，是一组key的集合，但不存储value，且在set中没有重复的key<br>集合中可以存放的类型：整型，浮点型，复数，布尔值，字符串，元组，冰冻集合<br>集合序列操作的函数有：<br>Len()获取集合长度 max()获取集合最大值 min()获取集合最小值 set() 创建集合<br>集合的遍历<br>普通集合遍历<br>    for  变量  in   集合:<br>        使用变量<br>多集集合遍历<br>    集合={(值,值…),(值,值…),(值,值…)}<br>    for  变量1,变量2  in   集合:<br>        使用变量1和变量2<br>集合专用函数<br>add()添加元素<br>pop()随机删除一个元素<br>remove(val)删除集合中的某个元素，返回值None<br>discard(key)删除元素，不同的是，如果删除的元素不在集合中，remove会报错，discard不会报错，返回值None<br>clear()删除集合的所有元素（使它成为空集）<br>copy()返回一个新集合，它是集合s的浅拷贝</p>
+<h3 id="典型的数学集合运算"><a href="#典型的数学集合运算" class="headerlink" title="典型的数学集合运算"></a>典型的数学集合运算</h3><p>交集-intersection</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>s1 = set([1, 2, 3])<br>s2 = set([2, 3, 4])<br>s1.intersection(s2)<br>{2, 3}<br>s1 &amp; s2<br>{2, 3}<br>并集-union<br>s1.union(s2)<br>{1, 2, 3, 4}<br>s1 | s2<br>{1, 2, 3, 4}<br>差集-difference<br>s1.difference(s2)<br>{1}<br>s2.difference(s1)<br>{4}<br>s1-s2<br>{1}<br>s2-s1<br>{4}<br>对称差-symmetric_difference<br>s1.symmetric_difference(s2)<br>{1, 4}<br>s2.symmetric_difference(s1)<br>{1, 4}<br>子集和超集<br>sSet=set([1,2,3])<br>bSet=set([1,2,3,4,5,6])<br>sSet.issubset(bSet)              True<br>bSet.issubset(sSet)              False<br>sSet.issuperset(bSet)          False<br>bSet.issuperset(sSet)             True<br>sSet.issubset(sSet)               True<br>sSet.issuperset(sSet)           True<br>冰冻集合-frozenset<br>冰冻集合<br>    冰冻集合又称为固定集合，只要创建成功，就不能进行修改<br>创建空的冰冻集合<br>    fset=frozenset()</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/20/Python元组，字典和集合相关操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Python_05" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

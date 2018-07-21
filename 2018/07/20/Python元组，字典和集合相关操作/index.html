@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 夏慕穆</title>
+  <title>Python元组，字典和集合相关操作 | 夏慕穆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="夏慕穆">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="python元组操作和列表相似，运算符和len（），max（），min（）等运算都适用于元组，而那些能改变元素的操作都不能直接操作元组创建单个元素的元组    tuple1=(‘小花花’)，    tuple1=’小花花’，基本格式    格式：变量=(i  for  i   in  元组)    结果：不是元组而是一个生成器带有条件的推导式    格式：变量=(i  for  i   in  元">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python元组，字典和集合相关操作">
+<meta property="og:url" content="http://yoursite.com/2018/07/20/Python元组，字典和集合相关操作/index.html">
 <meta property="og:site_name" content="夏慕穆">
+<meta property="og:description" content="python元组操作和列表相似，运算符和len（），max（），min（）等运算都适用于元组，而那些能改变元素的操作都不能直接操作元组创建单个元素的元组    tuple1=(‘小花花’)，    tuple1=’小花花’，基本格式    格式：变量=(i  for  i   in  元组)    结果：不是元组而是一个生成器带有条件的推导式    格式：变量=(i  for  i   in  元">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-21T07:06:18.893Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="夏慕穆">
+<meta name="twitter:title" content="Python元组，字典和集合相关操作">
+<meta name="twitter:description" content="python元组操作和列表相似，运算符和len（），max（），min（）等运算都适用于元组，而那些能改变元素的操作都不能直接操作元组创建单个元素的元组    tuple1=(‘小花花’)，    tuple1=’小花花’，基本格式    格式：变量=(i  for  i   in  元组)    结果：不是元组而是一个生成器带有条件的推导式    格式：变量=(i  for  i   in  元">
   
     <link rel="alternative" href="/atom.xml" title="夏慕穆" type="application/atom+xml">
   
@@ -150,211 +154,166 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Python元组，字典和集合相关操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Python元组，字典和集合相关操作
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/20/Python元组，字典和集合相关操作/" class="archive-article-date">
+
+        
+        <a href="/2018/07/20/Python元组，字典和集合相关操作/" class="archive-article-date">
   	<time datetime="2018-07-20T12:46:36.777Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/20/Python元组，字典和集合相关操作/">Python元组，字典和集合相关操作</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="python元组操作"><a href="#python元组操作" class="headerlink" title="python元组操作"></a>python元组操作</h3><p>和列表相似，运算符和len（），max（），min（）等运算都适用于元组，而那些能改变元素的操作都不能直接操作元组<br>创建单个元素的元组<br>    tuple1=(‘小花花’)，<br>    tuple1=’小花花’，<br>基本格式<br>    格式：变量=(i  for  i   in  元组)<br>    结果：不是元组而是一个生成器<br>带有条件的推导式<br>    格式：变量=(i  for  i   in  元组  if  条件表达式)<br>多个循环的推导式（可带有条件）<br>    格式：变量=(x+y  for  x   in  元组1  for  y   in  元组2  [if 条件表达式])<br>    x+y可以是其他操作    </p>
+<h3 id="字典操作"><a href="#字典操作" class="headerlink" title="字典操作"></a>字典操作</h3><p>字典是一种集合，不是序列。可以看成是由键值对构成的组合。<br>在搜索字典时，首先查找键，当查找到键后就可以直接获取该键对应的值，效率很高<br>创建字典：<br>创建空字典<br>    变量={}<br>    变量=dict()<br>创建单个元素的字典<br>    变量={‘键’,’值’}<br>创建多个元素的字典<br>    变量={键:值,键:值…..}<br>    变量=dict({键:值,键:值…..})<br>    变量=dict({键=值,键值…..})<br>    变量=dict([(键,值),(键,值)……])<br>for in 遍历<br>for i in dict1：<br>print(i)   键<br>print(dict1[i]) 值<br>dect1={‘zs’:’张三’,’ls’:’李四’,’ww’:’王五’,’sl’:’孙六’}<br>result={key:value  for key,value  in  dect1.items()}<br>print(result)<br>字典内置函数<br>dic={‘name’:’张三’,5:’男’,’heigh’:’180’}<br>print(dic)<br>print(str(dic))<br>print(len(dic))<br>print(type(dic))</p>
+<h3 id="集合操作"><a href="#集合操作" class="headerlink" title="集合操作"></a>集合操作</h3><p>集合是无序组合，集合是可变的，可以添加或移除数据，但是没有索引位置的概念（没有下标）。集合中任何元素都没有重复，还可以通过集合去除重复。<br>set和dict类似，是一组key的集合，但不存储value，且在set中没有重复的key<br>集合中可以存放的类型：整型，浮点型，复数，布尔值，字符串，元组，冰冻集合<br>集合序列操作的函数有：<br>Len()获取集合长度 max()获取集合最大值 min()获取集合最小值 set() 创建集合<br>集合的遍历<br>普通集合遍历<br>    for  变量  in   集合:<br>        使用变量<br>多集集合遍历<br>    集合={(值,值…),(值,值…),(值,值…)}<br>    for  变量1,变量2  in   集合:<br>        使用变量1和变量2<br>集合专用函数<br>add()添加元素<br>pop()随机删除一个元素<br>remove(val)删除集合中的某个元素，返回值None<br>discard(key)删除元素，不同的是，如果删除的元素不在集合中，remove会报错，discard不会报错，返回值None<br>clear()删除集合的所有元素（使它成为空集）<br>copy()返回一个新集合，它是集合s的浅拷贝</p>
+<h3 id="典型的数学集合运算"><a href="#典型的数学集合运算" class="headerlink" title="典型的数学集合运算"></a>典型的数学集合运算</h3><p>交集-intersection</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>s1 = set([1, 2, 3])<br>s2 = set([2, 3, 4])<br>s1.intersection(s2)<br>{2, 3}<br>s1 &amp; s2<br>{2, 3}<br>并集-union<br>s1.union(s2)<br>{1, 2, 3, 4}<br>s1 | s2<br>{1, 2, 3, 4}<br>差集-difference<br>s1.difference(s2)<br>{1}<br>s2.difference(s1)<br>{4}<br>s1-s2<br>{1}<br>s2-s1<br>{4}<br>对称差-symmetric_difference<br>s1.symmetric_difference(s2)<br>{1, 4}<br>s2.symmetric_difference(s1)<br>{1, 4}<br>子集和超集<br>sSet=set([1,2,3])<br>bSet=set([1,2,3,4,5,6])<br>sSet.issubset(bSet)              True<br>bSet.issubset(sSet)              False<br>sSet.issuperset(bSet)          False<br>bSet.issuperset(sSet)             True<br>sSet.issubset(sSet)               True<br>sSet.issuperset(sSet)           True<br>冰冻集合-frozenset<br>冰冻集合<br>    冰冻集合又称为固定集合，只要创建成功，就不能进行修改<br>创建空的冰冻集合<br>    fset=frozenset()</p>
+</blockquote>
+</blockquote>
+</blockquote>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/20/Python元组，字典和集合相关操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/Python_05/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:58:29.049Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/17/Python_05/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python基础5——字符串操作</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/Python_05/">Python基础5——字符串操作</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/Python_04/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:58:29.048Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/Python_04/">Python基础4——高级特性</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/Python_03/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:58:29.046Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/Python_03/">Python基础3——控制语句</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/Python_02/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:58:29.045Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/Python_02/">Python基础2——运算和运算符</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/Python_01/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:58:29.044Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/Python_01/">Python基础1——数据类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:58:29.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/hello-world/">Python学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -377,8 +336,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
