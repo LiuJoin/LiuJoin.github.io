@@ -183,6 +183,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">函数</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -239,10 +250,9 @@
       
         <h2 id="数学模块math"><a href="#数学模块math" class="headerlink" title="数学模块math"></a>数学模块math</h2><p>导入模块：import math<br>数学模块分为三个模块：数学函数，随机数函数，三角函数</p>
 <h3 id="math-数学函数"><a href="#math-数学函数" class="headerlink" title="math 数学函数"></a>math 数学函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line"><span class="comment">#数学函数</span></span><br><span class="line">import math</span><br><span class="line"><span class="comment">#获取绝对值</span></span><br><span class="line"><span class="built_in">print</span>(abs(-10))</span><br><span class="line"><span class="comment">#向上取整</span></span><br><span class="line"><span class="built_in">print</span>(math.ceil(2.8))</span><br><span class="line"><span class="comment">#向下取整</span></span><br><span class="line"><span class="built_in">print</span>(math.floor(2.4))</span><br><span class="line"><span class="comment">#求和</span></span><br><span class="line"><span class="built_in">print</span>(sum(&#123;1,2,3&#125;))</span><br><span class="line"><span class="comment">#生成序列</span></span><br><span class="line"><span class="built_in">print</span>(sum(range(5)))</span><br><span class="line"><span class="comment">#获取e的x次幂</span></span><br><span class="line"><span class="built_in">print</span>(math.exp(3))</span><br><span class="line"><span class="comment">#获取绝对值的浮点数</span></span><br><span class="line"><span class="built_in">print</span>(math.fabs(5))</span><br><span class="line"><span class="comment">#将浮点数，分为整数和小数部分，小数部分是一个完整的小数</span></span><br><span class="line"><span class="built_in">print</span>(math.modf(6.855))</span><br><span class="line"><span class="comment">#对浮点数进行四舍五入，保留小数点后几位</span></span><br><span class="line"><span class="built_in">print</span>(round(6.855,2))</span><br></pre></td></tr></table></figure>
-<h3 id="math数学常量"><a href="#math数学常量" class="headerlink" title="math数学常量"></a>math数学常量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取常量π</span></span><br><span class="line"><span class="built_in">print</span>(math.pi)</span><br><span class="line"><span class="comment">#获取常量e</span></span><br><span class="line"><span class="built_in">print</span>(math.e)</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用del删除元素，删除多个时，中间用逗号隔开，在列表中删除一个元素之后，会重新将内容的下标排序</span></span><br><span class="line">var1=1</span><br><span class="line">var2=2</span><br><span class="line">del var2,var1</span><br><span class="line"><span class="built_in">print</span>(var1)</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除列表中的前两个元素</span></span><br><span class="line">lists=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>]</span><br><span class="line"><span class="built_in">print</span>(lists)</span><br><span class="line">del lists[0],lists[0]</span><br><span class="line"><span class="built_in">print</span>(lists)</span><br></pre></td></tr></table></figure>
-<h3 id="math随机数函数"><a href="#math随机数函数" class="headerlink" title="math随机数函数"></a>math随机数函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#3.6之前的版本获取所有内置变量和函数名需要import，3.6.5中不需要引入</span></span><br><span class="line"><span class="comment"># import builtins</span></span><br><span class="line"><span class="built_in">print</span>(dir(__builtins__))</span><br><span class="line"></span><br><span class="line"><span class="comment">#random()获取0-1之间的随机数，包含0，不包含1</span></span><br><span class="line">ran=math.floor(random.random()*11)<span class="comment">#*floor(max-min+1)+min</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#choice随机获取列表中的一个元素</span></span><br><span class="line">ran1=random.choice(range(10))</span><br><span class="line">ran1=[<span class="string">'胡辣汤'</span>,<span class="string">'豆腐脑'</span>,<span class="string">'油条'</span>,<span class="string">'煎饼果子'</span>,<span class="string">'鸡蛋饼'</span>]</span><br><span class="line"><span class="built_in">print</span>(random.choice(ran1))</span><br><span class="line"></span><br><span class="line"><span class="comment">#将序列中的所有元素随机排序，获取固定下标的值，类似于choice，随机获取</span></span><br><span class="line">random.shuffle(ran1)</span><br><span class="line"><span class="built_in">print</span>(ran1[0])</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取指定范围内的随机整数，间隔值默认为1，可以定义起始值；如果只写一个参数表示从0开始到指定数值，不包含数值本身</span></span><br><span class="line"><span class="built_in">print</span>(random.randrange(100,1000,2))</span><br><span class="line"></span><br><span class="line"><span class="comment">#随机返回一个整数，包含开始值和结束值</span></span><br><span class="line"><span class="built_in">print</span>(random.randint(5,7))</span><br><span class="line"></span><br><span class="line"><span class="comment">#随机生成下一个实数（小数），它在[x,y]范围内，包含边界值</span></span><br><span class="line"><span class="built_in">print</span>(random.uniform(1,10))</span><br><span class="line"></span><br><span class="line"><span class="comment">#原型打印内容</span></span><br><span class="line">str1=<span class="string">'hello wworld'</span></span><br><span class="line"><span class="built_in">print</span>(str1)     <span class="comment">#hello wworld</span></span><br><span class="line"><span class="built_in">print</span>(repr(str1))  <span class="comment">#'hello wworld'</span></span><br><span class="line"><span class="comment">#把字符串当做py代码执行</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">eval</span>(repr(str1)))</span><br><span class="line"></span><br><span class="line"><span class="comment">#locals表示当前环境中的所有变量，如果在函数中，只能获取函数中的变量</span></span><br><span class="line">def one():</span><br><span class="line">    a=<span class="string">'123'</span></span><br><span class="line">    b=<span class="string">'456'</span></span><br><span class="line">    <span class="built_in">print</span>(locals())</span><br><span class="line">one()</span><br></pre></td></tr></table></figure>
-
+        
+          <a class="article-more-a" href="/2018/07/21/Python数学和列表操作/#more">more >></a>
+        
       
 
       
@@ -250,6 +260,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学函数</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -882,6 +903,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数学函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">函数</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
