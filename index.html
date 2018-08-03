@@ -249,8 +249,26 @@
     <article id="post-Python_11os操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/03/Python_11os操作/">Python_11————os模块文件操作函数</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/03/Python_11os操作/" class="archive-article-date">
+  	<time datetime="2018-08-03T08:16:27.770Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="os模块文件操作函数"><a href="#os模块文件操作函数" class="headerlink" title="os模块文件操作函数"></a>os模块文件操作函数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import os </span><br><span class="line"></span><br><span class="line"><span class="comment"># 得到文件上一层的所有目录,获得目录</span></span><br><span class="line"><span class="built_in">print</span>(os.getcwd())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出文件中所有的文件名称或文件夹名称，以列表的方式</span></span><br><span class="line"><span class="built_in">print</span>(os.listdir(<span class="string">'E:\\deploy'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在某路径下创建新的文件夹</span></span><br><span class="line"><span class="built_in">print</span>(os.mkdir(<span class="string">'E:\\deploy\\one'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在某路径下删除新的文件夹  只能删除空文件夹</span></span><br><span class="line"><span class="built_in">print</span>(os.rmdir(<span class="string">'E:\\deploy\\one'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 彻底删除文件，无法恢复</span></span><br><span class="line">import shutil</span><br><span class="line">shutil.rmtree(<span class="string">''</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归创建文件夹</span></span><br><span class="line"><span class="built_in">print</span>(os.makedirs(<span class="string">'e:\\a\\b\\c\\d'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归删除文件夹</span></span><br><span class="line"><span class="built_in">print</span>(os.removedirs(<span class="string">'e:\\a\\b\\c\\d'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改文件或文件夹的名称</span></span><br><span class="line">os.rename(<span class="string">'E:\\name'</span>,<span class="string">'e:\\dream'</span>)</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/08/03/Python_11os操作/#more">more >></a>
         
       
 
@@ -259,6 +277,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -300,7 +329,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/02/Python_10内置文件操作/">Python内置文件的操作</a>
+      <a class="article-title" href="/2018/08/02/Python_10内置文件操作/">Python_10————内置文件的操作</a>
     </h1>
   
 
