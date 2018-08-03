@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>夏慕穆</title>
+  <title>Python_13————模块和包 | 夏慕穆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="夏慕穆">
+  <meta name="description" content="模块模块  py文件就是模块 12345678import os# 获得当前模块的路径print(os.__file__)# 模块分类：# 1.系统自带的模块# 2.第三方模块 # 3.自己去定义模块">
+<meta name="keywords" content="Python基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python_13————模块和包">
 <meta property="og:url" content="http://yoursite.com/2018/08/03/Python_13模块与包/index.html">
 <meta property="og:site_name" content="夏慕穆">
+<meta property="og:description" content="模块模块  py文件就是模块 12345678import os# 获得当前模块的路径print(os.__file__)# 模块分类：# 1.系统自带的模块# 2.第三方模块 # 3.自己去定义模块">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-03T08:21:18.965Z">
+<meta property="og:updated_time" content="2018-08-03T12:52:35.653Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="夏慕穆">
+<meta name="twitter:title" content="Python_13————模块和包">
+<meta name="twitter:description" content="模块模块  py文件就是模块 12345678import os# 获得当前模块的路径print(os.__file__)# 模块分类：# 1.系统自带的模块# 2.第三方模块 # 3.自己去定义模块">
   
     <link rel="alternative" href="/atom.xml" title="夏慕穆" type="application/atom+xml">
   
@@ -154,9 +158,33 @@
             <article id="post-Python_13模块与包" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python_13————模块和包
+    </h1>
+  
+
+        
+        <a href="/2018/08/03/Python_13模块与包/" class="archive-article-date">
+  	<time datetime="2018-08-03T08:21:18.965Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>模块  py文件就是模块</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import os</span><br><span class="line"><span class="comment"># 获得当前模块的路径</span></span><br><span class="line"><span class="built_in">print</span>(os.__file__)</span><br><span class="line"><span class="comment"># 模块分类：</span></span><br><span class="line"><span class="comment"># 1.系统自带的模块</span></span><br><span class="line"><span class="comment"># 2.第三方模块 </span></span><br><span class="line"><span class="comment"># 3.自己去定义模块</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#写程序的顺序</span></span><br><span class="line"></span><br><span class="line">import xxx</span><br><span class="line"></span><br><span class="line">def dels():</span><br><span class="line">    del</span><br><span class="line"></span><br><span class="line">def add():</span><br><span class="line">    add</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h3 id="引入模块的方法"><a href="#引入模块的方法" class="headerlink" title="引入模块的方法"></a>引入模块的方法</h3><p>1.import 模块名 [as 别名]<br> 模块名.方法名（）<br>2.from 模块名 import 方法名1[，方法名2]<br> 方法名1（）<br>3.from 模块名 import *<br> 方法名1（）<br> 引入模块中的所有方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># __all__  在模块中使用__all__方法，在使用*引入模块的时候，在__all__ 定义的有谁，就只能调用谁；但是import sendmsg as sen的方法不受影响</span></span><br></pre></td></tr></table></figure>
+<h2 id="包的调用"><a href="#包的调用" class="headerlink" title="包的调用"></a>包的调用</h2><p>在同级文件下引入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import msg</span><br><span class="line">msg.sendmsg.test1()</span><br><span class="line">msg.sendmsg.test2()</span><br><span class="line"></span><br><span class="line">from msg import sendmsg</span><br><span class="line">sendmsg.test1()</span><br><span class="line"></span><br><span class="line"><span class="comment">#__all__  模块</span></span><br><span class="line"><span class="comment">#定义的是哪些函数，就能够调用哪些  import 不受影响</span></span><br><span class="line"><span class="comment">#__all__  包  定义在init总的模块能够被调用。</span></span><br></pre></td></tr></table></figure></p>
+<p>在上一级文件下引入包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import sys</span><br><span class="line"><span class="comment"># 写入绝对路径，可以调用成功</span></span><br><span class="line">sys.path.append(<span class="string">'H:\\lxl\\python\\code\\day12'</span>)</span><br><span class="line">import def1</span><br><span class="line">def1.ass()</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -185,6 +213,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -270,6 +309,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#模块"><span class="toc-number">1.</span> <span class="toc-text">模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#引入模块的方法"><span class="toc-number">1.1.</span> <span class="toc-text">引入模块的方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#包的调用"><span class="toc-number">2.</span> <span class="toc-text">包的调用</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
