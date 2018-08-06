@@ -152,6 +152,155 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Python_14异常处理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/06/Python_14异常处理/">Python_14异常处理</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/06/Python_14异常处理/" class="archive-article-date">
+  	<time datetime="2018-08-06T13:58:09.425Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># try:</span></span><br><span class="line"><span class="comment">#     5/0</span></span><br><span class="line"><span class="comment">#     # print(n)</span></span><br><span class="line"><span class="comment"># except (NameError,ZeroDivisionError):</span></span><br><span class="line"><span class="comment">#     print('这是一个错误')</span></span><br><span class="line"><span class="comment"># except Exception as res:</span></span><br><span class="line"><span class="comment">#     print(res,'错误')</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># except:#什么都不写就代表处理的是所有的错误</span></span><br><span class="line"><span class="comment"># else: #只有在没有错误的时候执行</span></span><br><span class="line"><span class="comment"># finally: #不管有没有错误最后都会执行</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># raise后跟的是类名</span></span><br><span class="line"><span class="comment"># 断言 assert后跟的是一个表达式</span></span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    assert 1==2,<span class="string">'1不等于2'</span></span><br><span class="line">except AssertionError as ass:</span><br><span class="line">    <span class="built_in">print</span>(ass.__class__.__name__,ass)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/06/Python_14异常处理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Excel的简单操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/06/Excel的简单操作/">Python_Excel的简单操作</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/06/Excel的简单操作/" class="archive-article-date">
+  	<time datetime="2018-08-06T13:58:09.425Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="xlwt的写入"><a href="#xlwt的写入" class="headerlink" title="xlwt的写入"></a>xlwt的写入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># import xlwt</span></span><br><span class="line"><span class="comment"># xls = xlwt.Workbook()</span></span><br><span class="line"><span class="comment"># sheet = xls.add_sheet('信息表')  #表名</span></span><br><span class="line"><span class="comment"># sheet.write(2,0,'张')  #单元格中的第一行第一列中写入的内容</span></span><br><span class="line"><span class="comment"># sheet.write(2,1,'181')  #单元格的第一行第二列中写入的内容</span></span><br><span class="line"><span class="comment"># # 可以指定写入某一行，但是会将表格中所有的内容替换掉</span></span><br><span class="line"><span class="comment"># # 例：若表格中有两行内容，再次写入到第三行时会将前两行的内容替换掉，只显示第三行的内容</span></span><br><span class="line"><span class="comment"># xls.save('学生信息.xls') # 文件名</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/08/06/Excel的简单操作/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/06/Excel的简单操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-文件操作练习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -734,159 +883,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/26/Python_08函数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Python_06数学和列表操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/Python_06数学和列表操作/">Python_06————数学和列表操作</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/21/Python_06数学和列表操作/" class="archive-article-date">
-  	<time datetime="2018-07-21T07:11:35.111Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="数学模块math"><a href="#数学模块math" class="headerlink" title="数学模块math"></a>数学模块math</h2><p>导入模块：import math<br>数学模块分为三个模块：数学函数，随机数函数，三角函数</p>
-<h3 id="math-数学函数"><a href="#math-数学函数" class="headerlink" title="math 数学函数"></a>math 数学函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line"><span class="comment">#数学函数</span></span><br><span class="line">import math</span><br><span class="line"><span class="comment">#获取绝对值</span></span><br><span class="line"><span class="built_in">print</span>(abs(-10))</span><br><span class="line"><span class="comment">#向上取整</span></span><br><span class="line"><span class="built_in">print</span>(math.ceil(2.8))</span><br><span class="line"><span class="comment">#向下取整</span></span><br><span class="line"><span class="built_in">print</span>(math.floor(2.4))</span><br><span class="line"><span class="comment">#求和</span></span><br><span class="line"><span class="built_in">print</span>(sum(&#123;1,2,3&#125;))</span><br><span class="line"><span class="comment">#生成序列</span></span><br><span class="line"><span class="built_in">print</span>(sum(range(5)))</span><br><span class="line"><span class="comment">#获取e的x次幂</span></span><br><span class="line"><span class="built_in">print</span>(math.exp(3))</span><br><span class="line"><span class="comment">#获取绝对值的浮点数</span></span><br><span class="line"><span class="built_in">print</span>(math.fabs(5))</span><br><span class="line"><span class="comment">#将浮点数，分为整数和小数部分，小数部分是一个完整的小数</span></span><br><span class="line"><span class="built_in">print</span>(math.modf(6.855))</span><br><span class="line"><span class="comment">#对浮点数进行四舍五入，保留小数点后几位</span></span><br><span class="line"><span class="built_in">print</span>(round(6.855,2))</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/07/21/Python_06数学和列表操作/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/Python_06数学和列表操作/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Python_07元组，字典和集合相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/20/Python_07元组，字典和集合相关操作/">Python_07————元组，字典和集合相关操作</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/20/Python_07元组，字典和集合相关操作/" class="archive-article-date">
-  	<time datetime="2018-07-20T12:46:36.777Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="python元组操作"><a href="#python元组操作" class="headerlink" title="python元组操作"></a>python元组操作</h3><p>和列表相似，运算符和len（），max（），min（）等运算都适用于元组，而那些能改变元素的操作都不能直接操作元组<br>创建单个元素的元组<br>    tuple1=(‘小花花’)，<br>    tuple1=’小花花’，<br>基本格式<br>    格式：变量=(i  for  i   in  元组)<br>    结果：不是元组而是一个生成器<br>带有条件的推导式<br>    格式：变量=(i  for  i   in  元组  if  条件表达式)<br>多个循环的推导式（可带有条件）<br>    格式：变量=(x+y  for  x   in  元组1  for  y   in  元组2  [if 条件表达式])<br>    x+y可以是其他操作    </p>
-        
-          <a class="article-more-a" href="/2018/07/20/Python_07元组，字典和集合相关操作/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/20/Python_07元组，字典和集合相关操作/">展开全文 >></a>
         </p>
       
 
