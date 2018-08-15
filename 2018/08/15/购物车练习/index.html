@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 夏慕穆</title>
+  <title>Python_购物车练习 | 夏慕穆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="夏慕穆">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="实现购物车的功能写一个购物车购物车功能要求：要求用户输入总资产，例如：2000显示商品列表，让用户根据序号选择商品，加入购物车购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。">
+<meta name="keywords" content="Python基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python_购物车练习">
+<meta property="og:url" content="http://yoursite.com/2018/08/15/购物车练习/index.html">
 <meta property="og:site_name" content="夏慕穆">
+<meta property="og:description" content="实现购物车的功能写一个购物车购物车功能要求：要求用户输入总资产，例如：2000显示商品列表，让用户根据序号选择商品，加入购物车购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-15T02:30:08.754Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="夏慕穆">
+<meta name="twitter:title" content="Python_购物车练习">
+<meta name="twitter:description" content="实现购物车的功能写一个购物车购物车功能要求：要求用户输入总资产，例如：2000显示商品列表，让用户根据序号选择商品，加入购物车购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。">
   
     <link rel="alternative" href="/atom.xml" title="夏慕穆" type="application/atom+xml">
   
@@ -150,36 +155,58 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-购物车练习" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Python_购物车练习
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/15/药品练习/" class="archive-article-date">
+
+        
+        <a href="/2018/08/15/购物车练习/" class="archive-article-date">
   	<time datetime="2018-08-15T02:21:26.344Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/15/药品练习/">Python_药品练习</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="实现购物车的功能"><a href="#实现购物车的功能" class="headerlink" title="实现购物车的功能"></a>实现购物车的功能</h2><p>写一个购物车<br>购物车<br>功能要求：<br>要求用户输入总资产，例如：2000<br>显示商品列表，让用户根据序号选择商品，加入购物车<br>购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。</p>
+<a id="more"></a>
+<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def shanChu():</span><br><span class="line">    <span class="keyword">if</span> buy:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"购物车商品"</span>.center(50, <span class="string">"*"</span>))</span><br><span class="line">        <span class="keyword">for</span> l,m <span class="keyword">in</span> enumerate(buy,1):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"编号&#123;&#125;\t\t商品名称：&#123;&#125;\t\t商品价格&#123;&#125;"</span>.format(l,m[na],m[pr]))</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"*"</span>*55)</span><br><span class="line">        delate = input(<span class="string">"请输出要删除商品的编号"</span>).strip()</span><br><span class="line">        <span class="keyword">if</span> delate.isdigit():</span><br><span class="line">            delate = int(delate)</span><br><span class="line">            <span class="keyword">if</span> delate &lt;= len(buy):</span><br><span class="line">                money += int(goods[number-1][<span class="string">'price'</span>])</span><br><span class="line">                del buy[delate-1]</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"已删除成功"</span>)</span><br><span class="line">            <span class="keyword">else</span>:<span class="built_in">print</span>(<span class="string">"输出的编号超出范围"</span>)</span><br><span class="line">        <span class="keyword">else</span>:<span class="built_in">print</span>(<span class="string">"输出的编号不合法"</span>)</span><br><span class="line">    <span class="keyword">else</span>:<span class="built_in">print</span>(<span class="string">"购物车为空"</span>)</span><br><span class="line"></span><br><span class="line">def tuiChu(money):</span><br><span class="line">    <span class="keyword">if</span> buy:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"您购买的商品有:"</span>)</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> buy:</span><br><span class="line">            <span class="built_in">print</span>(k[na])</span><br><span class="line">        money=money1-money</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"总消费%d"</span> % (money))</span><br><span class="line">        <span class="built_in">return</span> money</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"您购物车为空"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def chong(money):</span><br><span class="line">    <span class="keyword">while</span> True:</span><br><span class="line">        money2 = input(<span class="string">"请输入充值金额："</span>)</span><br><span class="line">        <span class="keyword">if</span> money2.isdigit():</span><br><span class="line">            money2 = int(money2)</span><br><span class="line">            money += money2</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"充值成功，剩余总资产%d"</span> % money)</span><br><span class="line">            <span class="built_in">return</span> money</span><br><span class="line">            <span class="built_in">break</span></span><br><span class="line">        <span class="keyword">else</span>:<span class="built_in">print</span>(<span class="string">"充值金额不合法"</span>)</span><br><span class="line"></span><br><span class="line">goods = [&#123;<span class="string">"name"</span>: <span class="string">"电脑"</span>, <span class="string">"price"</span>: 1999&#125;,&#123;<span class="string">"name"</span>: <span class="string">"鼠标"</span>, <span class="string">"price"</span>: 10&#125;,&#123;<span class="string">"name"</span>: <span class="string">"游艇"</span>, <span class="string">"price"</span>: 20&#125;,&#123;<span class="string">"name"</span>: <span class="string">"美女"</span>, <span class="string">"price"</span>: 998&#125;]</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    money = input(<span class="string">"请输入总资产:"</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> money.isdigit():</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">    <span class="keyword">else</span>:<span class="built_in">print</span>(<span class="string">"总资产输入错误，请重新输入:"</span>)</span><br><span class="line">money = int(money)</span><br><span class="line">money1 =money</span><br><span class="line">buy = []</span><br><span class="line">goods = [&#123;<span class="string">"name"</span>: <span class="string">"电脑"</span>, <span class="string">"price"</span>: 1999&#125;,</span><br><span class="line">           &#123;<span class="string">"name"</span>: <span class="string">"鼠标"</span>, <span class="string">"price"</span>: 100&#125;,</span><br><span class="line">         &#123;<span class="string">"name"</span>: <span class="string">"游艇"</span>, <span class="string">"price"</span>: 5000&#125;,</span><br><span class="line">         &#123;<span class="string">"name"</span>: <span class="string">"美女"</span>, <span class="string">"price"</span>: 9998&#125;,</span><br><span class="line">]</span><br><span class="line">pr = <span class="string">"price"</span></span><br><span class="line">na = <span class="string">"name"</span></span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"请选择如下商品"</span>.center(50,<span class="string">"*"</span>))</span><br><span class="line">    <span class="keyword">for</span> i,j <span class="keyword">in</span> enumerate(goods,1):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"编号&#123;&#125;\t\t商品名称：&#123;&#125;\t\t商品价格&#123;&#125;"</span>.format(i,j[na],j[pr]))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"*"</span>*55)</span><br><span class="line">    number = input(<span class="string">"请输入要买商品的编号（充值请按C/c，删除请按D/d，退出请按Q/q:"</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> number.isdigit():</span><br><span class="line">        number = int(number)</span><br><span class="line">        <span class="keyword">if</span> number &lt;= len(goods):</span><br><span class="line">            <span class="keyword">if</span> goods[number-1][pr] &lt;= money:</span><br><span class="line">                buy.append(goods[number-1])</span><br><span class="line">                money -= goods[number-1][pr]</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"已经添加购物车%s,剩余总资产%d"</span> % (goods[number-1][na],money))</span><br><span class="line">            <span class="keyword">else</span>:<span class="built_in">print</span>(<span class="string">"账户余额不足"</span>)</span><br><span class="line">        <span class="keyword">else</span>:<span class="built_in">print</span>(<span class="string">"编号超出范围"</span>)</span><br><span class="line">    <span class="keyword">elif</span> number.upper() == <span class="string">"Q"</span>:</span><br><span class="line">        money=tuiChu(money)</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">    <span class="keyword">elif</span> number.upper() == <span class="string">"C"</span>:</span><br><span class="line">        money=chong(money)</span><br><span class="line">    <span class="keyword">elif</span> number.upper() == <span class="string">"D"</span>:</span><br><span class="line">        shanChu()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"输出的参数错误"</span>)</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>你最美<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,364 +218,127 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/15/购物车练习/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/15/购物车练习/" class="archive-article-date">
-  	<time datetime="2018-08-15T02:21:26.344Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/08/15/药品练习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Python_药品练习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/06/Python_14异常处理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python_14异常处理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/15/购物车练习/">Python_购物车练习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#实现购物车的功能"><span class="toc-number">1.</span> <span class="toc-text">实现购物车的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码如下"><span class="toc-number">2.</span> <span class="toc-text">代码如下</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/06/Python_14异常处理/" class="archive-article-date">
-  	<time datetime="2018-08-06T13:58:09.425Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/06/Python_14异常处理/">Python_14异常处理</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/06/Excel的简单操作/" class="archive-article-date">
-  	<time datetime="2018-08-06T13:58:09.425Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/06/Excel的简单操作/">Python_Excel的简单操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/04/文件操作练习/" class="archive-article-date">
-  	<time datetime="2018-08-04T08:45:18.523Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/04/文件操作练习/">Python_练习</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/03/Python_13模块与包/" class="archive-article-date">
-  	<time datetime="2018-08-03T08:21:18.965Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/03/Python_13模块与包/">Python_13————模块和包</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/03/Python_12时间操作/" class="archive-article-date">
-  	<time datetime="2018-08-03T08:20:29.244Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/03/Python_12时间操作/">Python_12————时间函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/03/Python_11os操作/" class="archive-article-date">
-  	<time datetime="2018-08-03T08:16:27.770Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/03/Python_11os操作/">Python_11————os模块文件操作函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/Python_10内置文件操作/" class="archive-article-date">
-  	<time datetime="2018-08-02T07:51:18.161Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/Python_10内置文件操作/">Python_10————内置文件的操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/Python_09函数嵌套，递归/" class="archive-article-date">
-  	<time datetime="2018-07-27T11:33:13.347Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/Python_09函数嵌套，递归/">Python_09————常用高阶函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -572,8 +362,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
